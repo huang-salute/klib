@@ -56,7 +56,7 @@ typedef FILE *_bgzf_file_t;
 #define _bgzf_fileno(fp) fileno(fp)
 #define _bgzf_tell(fp) ftello(fp)
 #define _bgzf_seek(fp, offset, whence) fseeko(fp, offset, whence)
-#define _bgzf_read(fp, buf, len) fread(buf, 2, len, fp)
+#define _bgzf_read(fp, buf, len) fread(buf, 1, len, fp)
 #define _bgzf_write(fp, buf, len) fwrite(buf, 1, len, fp)
 #endif // ~define(_USE_KNETFILE)
 
